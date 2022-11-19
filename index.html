@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El mundo de las piezas</title>
+    <script src="js/popper.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!--Barra de navegación-->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <img src="img/logo.png" alt="logo" width="100">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0 index-link">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                    <!--carrito-->
+                    <li class="nav-item dropdown" style="margin-top: -8px">
+                        <img src="img/carrito.png" class="nav-link dropdown-toggle img-fluid" height="60px"
+                                    width="60px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                        <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                            <table id="lista-carrito" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" style="margin-left: 6px" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                            <a href="#" style="margin-left: 6px" id="procesar-pedido" class="btn btn-success btn-block">Procesar Compra</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Banner-->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="font-secondary mb-4" style="color: #e88f2a">Novedades e ingresos</h1>
+                    <h1 class="display-1 text-uppercase text-white mb-4">El mundo de las piezas</h1>
+                    <h1 class="text-white">Encuentra los mejores escenarios convertidos en rompecabezas</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--LOS MÁS PEDIDOS-->  
+    <div class="container-fluid bg-icon my-5 py-6">
+        <div class="container">
+            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-5 mb-3">Los más pedidos</h1>
+            </div>
+            <div class="container" id="lista-productos">
+                <div class="row g-4 lista-productos">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp product-item" data-wow-delay="0.1s">
+                        <div class="bg-white text-center h-100 p-4 p-xl-5">
+                            <img class="img-fluid mb-4" src="img/noche-estrellada.jpg" alt="">
+                            <h5 class="mb-3">La noche estrellada</h5>
+                            <p class="mb-4"><strong>S/. <span>60.00</span></strong></p>
+                            <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill agregar-carrito" href="#" data-id="1">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp product-item" data-wow-delay="0.3s">
+                        <div class="bg-white text-center h-100 p-4 p-xl-5">
+                            <img class="img-fluid mb-4" src="img/tienda.jpg" alt="">
+                            <h5 class="mb-3">Tienda de dulces</h5>
+                            <p class="mb-4"><strong>S/. <span>54.30</span></strong></p>
+                            <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill agregar-carrito" href="#" data-id="2">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp product-item" data-wow-delay="0.5s">
+                        <div class="bg-white text-center h-100 p-4 p-xl-5">
+                            <img class="img-fluid mb-4" src="img/mapa.jpg" alt="">
+                            <h5 class="mb-3">Mapa del mundo antiguo</h5>
+                            <p class="mb-4"><strong>S/. <span>42.00</span></strong></p>
+                            <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill agregar-carrito" href="#" data-id="3">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--RECOMENDACIONES-->
+    <div class="container-fluid bg-light bg-icon my-5 py-6">
+        <div class="container">
+            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-5 mb-3">Recomendaciones</h1>
+            </div>
+            <div class="row g-4 recomendaciones">
+                <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="img/reco1.png" alt="">
+                        <h4 class="mb-3">Juntos vencerán</h4>
+                        <p class="mb-4">Organiza las piezas según su color y forma y separa los bordes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="img/reco2.png" alt="">
+                        <h4 class="mb-3">Deja de buscar</h4>
+                        <p class="mb-4">No te obsesiones con una ficha. Cuantas más piezas coloques, más sencillo es buscar las restantes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="img/reco3.png" alt="">
+                        <h4 class="mb-3">Que se haga la luz</h4>
+                        <p class="mb-4">Contar con buena iluminación es la clave. La luz natural es imbatible.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="img/reco4.png" alt="">
+                        <h4 class="mb-3">Creatividad, ven a mí</h4>
+                        <p class="mb-4">Enfréntate al rompecabezas con creatividad. No todos  tienen por qué resolverse de la misma manera.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOTER-->  
+    <footer>
+        <div>
+            <h3>El mundo de las piezas</h3>
+            <div>
+                <img src="img/bi_telephone-fill.png" alt="icono celular" class="icon icon-celular" />
+                <p>989 453 338</p>
+            </div>
+        </div>
+        <div>
+            <p>&copy; Todos Los Derechos Reservados 2022</p>
+        </div>
+        <div>
+            <img src="img/akar-icons_instagram-fill.png" alt="icono instagram" class="icon icon-instagram" />
+            <img src="img/logoFacebook.png" alt="icono facebook" class="icon icon-facebook" />
+        </div>
+    </footer>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+</body>
+</html>

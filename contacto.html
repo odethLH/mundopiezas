@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - El mundo de las piezas</title>
+    <script src="js/popper.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!--Barra de navegación-->
+    <!--Barra de navegación-->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <img src="img/logo.png" alt="logo" width="100">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0 index-link">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                    <!--carrito-->
+                    <li class="nav-item dropdown" style="margin-top: -8px">
+                        <img src="img/carrito.png" class="nav-link dropdown-toggle img-fluid" height="60px"
+                                    width="60px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                        <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                            <table id="lista-carrito" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" style="margin-left: 6px" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                            <a href="#" style="margin-left: 6px" id="procesar-pedido" class="btn btn-success btn-block">Procesar Compra</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Contacto y formulario-->
+    <section class="main-container-contact">
+        <section class="container-contact">
+            <h2>Contáctanos</h2>
+            <p>Si tienes alguna consulta o comentario, llena este formulario o contáctanos a través de:</p>
+            <p>
+                <strong>Whatsapp: </strong> 989453338
+            </p>
+            <p>
+                <strong>Facebook: </strong> El mundo de las piezas
+            </p>
+            <p>
+                <strong>Instagram: </strong> El mundo de las piezas
+            </p>
+            <p>
+                <strong>Correo: </strong> contacto@elmundodelaspiezas.com
+            </p>
+        </section>
+        <section class="container-form">
+            <form id="formulario" method="post" class="needs-validation" novalidate>
+                <legend class="text-center header">Dejanos un mensaje</legend><hr>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label"><img src="img/account.png"></img>Nombre y Apellidos</label>
+                    <input type="text" class="form-control" id="nombre" onkeypress="return sololetras(event)">
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="empresa" class="form-label"><img src="img/account.png"></img>Empresa</label>
+                    <input type="text" class="form-control" id="empresa" onkeypress="return sololetras(event)">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label"><img src="img/mail.png"></img>Correo</label>
+                    <input type="email" class="form-control" id="email">
+                    <span id="alertaCorreo"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="celular" class="form-label"><img src="img/phone.png"></img>Celular</label>
+                    <input type="text" class="form-control" id="celular" onkeypress="return solonumeros(event,'celular',9)">
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label"><img src="img/write.png"></img>Mensaje</label>
+                    <textarea class="form-control" id="mensaje" placeholder="Escribe un mensaje" rows="7"></textarea>
+                    <span id="alertaMensaje"></span>
+                </div>
+                <div class="form-group-button">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </section>
+    <!--FOOTER-->  
+    <footer>
+        <div>
+            <h3>El mundo de las piezas</h3>
+            <div>
+                <img src="img/bi_telephone-fill.png" alt="icono celular" class="icon icon-celular" />
+                <p>989 453 338</p>
+            </div>
+        </div>
+        <div>
+            <p>&copy; Todos Los Derechos Reservados 2022</p>
+        </div>
+        <div>
+            <img src="img/akar-icons_instagram-fill.png" alt="icono instagram" class="icon icon-instagram" />
+            <img src="img/logoFacebook.png" alt="icono facebook" class="icon icon-facebook" />
+        </div>
+    </footer>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/contacto.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - El mundo de las piezas</title>
+    <script src="js/popper.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!--Barra de navegación-->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <img src="img/logo.png" alt="logo" width="100">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0 index-link">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="catalogo.html">Catálogo</a></li>
+                    <!--carrito-->
+                    <li class="nav-item dropdown" style="margin-top: -8px">
+                        <img src="img/carrito.png" class="nav-link dropdown-toggle img-fluid" height="60px"
+                                    width="60px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                        <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                            <table id="lista-carrito" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" style="margin-left: 6px" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                            <a href="#" style="margin-left: 6px" id="procesar-pedido" class="btn btn-success btn-block">Procesar Compra</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Productos-->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-0 gx-5 align-items-end">
+                <div class="col-lg-6">
+                    <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                        <h1 class="display-5 mb-3">Nuestros Productos</h1>
+                        <p>Selecciona tu rompecabeza favorito</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
+                        <li class="nav-item me-2">
+                            <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill" href="#tab-1">1000 piezas</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-2">2000 piezas</a>
+                        </li>
+                        <li class="nav-item me-0">
+                            <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-3">5000 piezas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content" id="lista-productos">
+                <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div class="row g-4">
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/san-francisco-mil.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">San Francisco</h5>
+                                        <p><strong>S/. <span>74.00</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="12">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/calabazas-mil.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Granja de Calabazas</h5>
+                                        <p><strong>S/. <span>71.00</span></strong></p>
+                                    <a href="#" class="btn btn-primary agregar-carrito" data-id="5">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/callecitas-de-los-andes-mil.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Callecitas de los Andes</h5>
+                                        <p><strong>S/. <span>59.90</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="6">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/camino-mil.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Camino en Pourville</h5>
+                                        <p><strong>S/. <span>54.70</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="7">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/grito-mil.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">El grito</h5>
+                                        <p><strong>S/. <span>66.00</span></strong></p>
+                                    <a href="#" class="btn btn-primary agregar-carrito" data-id="8">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/habana-mil.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Havana, Cuba</h5>
+                                        <p><strong>S/. <span>75.00</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="9">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/arbol-vida-mil.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">El árbol de la vida</h5>
+                                        <p><strong>S/. <span>82.00</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="10">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/rio-de-janeiro-mil.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Río de Janeiro</h5>
+                                        <p><strong>S/. <span>75.50</span></strong></p>
+                                    <a href="#" class="btn btn-primary agregar-carrito" data-id="11">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-2" class="tab-pane fade show p-0">
+                    <div class="row g-4">
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/dosmil-amsterdam.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Amsterdam con amor</h5>
+                                        <p><strong>S/. <span>68.40</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="12">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/dosmil-londes.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Atardecer en Londres</h5>
+                                        <p><strong>S/. <span>73.00</span></strong></p>
+                                    <a href="#" class="btn btn-primary agregar-carrito" data-id="13">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/dosmil-casa-de-lago.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Casa del Lago</h5>
+                                        <p><strong>S/. <span>70.00</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="14">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/dosmil-estante.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Estante del jardín</h5>
+                                        <p><strong>S/. <span>56.90</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="15">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/dosmil-iglesia.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Iglesia de Magdalena</h5>
+                                        <p><strong>S/. <span>72.30</span></strong></p>
+                                    <a href="#" class="btn btn-primary agregar-carrito" data-id="16">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/dosmil-praga.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Praga</h5>
+                                        <p><strong>S/. <span>75.00</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="17">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/dosmil-dolomitas.jpeg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Montañas Dolomitas</h5>
+                                        <p><strong>S/. <span>75.00</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="18">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/dosmil-casa-educadora.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Casa de la educadora</h5>
+                                        <p><strong>S/. <span>81.00</span></strong></p>
+                                    <a href="#" class="btn btn-primary agregar-carrito" data-id="19">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-3" class="tab-pane fade show p-0">
+                    <div class="row g-4">
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/cincomil-puerto.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Puerto</h5>
+                                        <p><strong>S/. <span>65.00</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="20">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/cincomil-roma-moderna.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Roma Moderna</h5>
+                                        <p><strong>S/. <span>68.70</span></strong></p>
+                                    <a href="#" class="btn btn-primary agregar-carrito" data-id="21">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/cincomil-circo.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Circo Mágico</h5>
+                                        <p><strong>S/. <span>76.00</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="22">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/cincomil-lago-alpino.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lago Alpino</h5>
+                                        <p><strong>S/. <span>74.70</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="23">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/cincomil-gran-ciudad.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">La gran ciudad</h5>
+                                        <p><strong>S/. <span>77.00</span></strong></p>
+                                    <a href="#" class="btn btn-primary agregar-carrito" data-id="24">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/cincomil-libreria.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">La mejor librería</h5>
+                                        <p><strong>S/. <span>83.00</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="25">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/cincomil-arrecife.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Arrecife de coral</h5>
+                                        <p><strong>S/. <span>69.00</span></strong></p>
+                                        <a href="#" class="btn btn-primary agregar-carrito" data-id="26">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="product-item">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/cincomil-puerto-mediterraneo.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Puerto Mediterráneo</h5>
+                                        <p><strong>S/. <span>75.50</span></strong></p>
+                                    <a href="#" class="btn btn-primary agregar-carrito" data-id="27">Agregar a carrito</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOTER-->  
+    <footer>
+        <div>
+            <h3>El mundo de las piezas</h3>
+            <div>
+                <img src="img/bi_telephone-fill.png" alt="icono celular" class="icon icon-celular" />
+                <p>989 453 338</p>
+            </div>
+        </div>
+        <div>
+            <p>&copy; Todos Los Derechos Reservados 2022</p>
+        </div>
+        <div>
+            <img src="img/akar-icons_instagram-fill.png" alt="icono instagram" class="icon icon-instagram" />
+            <img src="img/logoFacebook.png" alt="icono facebook" class="icon icon-facebook" />
+        </div>
+    </footer>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/contacto.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap');
+/*PAGINA 1: PRINCIPAL*/
+body {
+    font-family: 'El Messiri', sans-serif;
+}
+
+.navbar{
+    background-color: #dcccbb;
+}
+
+.navbar-brand img{ /*logo*/
+    margin-left: 25px;
+    width: 170px;
+}
+
+nav .index-link .nav-link{ 
+    margin: 0 30px;
+    color: black;
+    font-size: 25px;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: white;
+}
+
+.borrar-producto{ /*retirar el subrayado de botones de eliminar*/
+    text-decoration: none;
+}
+
+.hero-header { /*imagen del banner*/
+    background: url(/img/banner.jpg) no-repeat;
+    background-size: cover;
+}
+
+#intro span {
+    color: #a7754d;
+}
+
+/*Header*/
+.section-header {
+    position: relative;
+    padding-top: 25px;
+}
+
+.section-header::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 2px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #8d98a7;
+}
+
+.section-header::after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 2px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #eab464;
+}
+
+.section-header.text-start::before,
+.section-header.text-start::after {
+    left: 0;
+    transform: translateX(0);
+}
+
+/*productos más pedidos*/
+.product-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+}
+
+.product-item img {
+    transition: .5s;
+}
+
+.product-item:hover img {
+    transform: scale(1.1);
+}
+
+.recomendaciones {
+    justify-content: space-evenly;
+}
+
+/*footer*/
+footer{
+    background-color: #646e78;
+    color: white;
+    width: 100%;
+    padding: 12px 2.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div div{
+    display: flex;
+    flex-direction: row;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+footer div:nth-child(2), .telefonoContacto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-gap: 12px;
+}
+
+footer div .icon-celular {
+    margin-top: -15px;
+}
+
+footer div .icon-facebook {
+    margin-left: 10px;
+} 
+
+/*PÁGINA 2: CATALOGO*/
+.page-header {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+    background: url(/img/productos.jpg) bottom right no-repeat;
+    background-size: cover;
+}
+
+.container-products {
+    margin: 20px 100px;
+}
+
+.container-products .row {
+    margin-bottom: 20px;
+}
+
+/*PÁGINA 3: COMPRAS*/
+.table th, td {
+    text-align: center;
+}
+
+#cargando {
+    display: none;
+}
+
+.main-container-compra{
+    margin-top: 30px;
+}
+
+.main-container-compra table th {
+    font-weight: 0;
+}
+
+.pago-container input{
+    margin-bottom: 15px;
+}
+
+/*PÁGINA 4: CONTACTANOS*/
+.main-container-contact {
+    display: grid;
+    justify-items: center;
+}
+
+.container-contact {
+    padding: 35px;
+}
+
+/*formulario*/
+.container-form {
+    padding: 0 35px;
+    width: 680px;
+    margin-bottom: 40px;
+}
+
+.form-horizontal {
+    justify-items: center;
+}
+
+legend {
+    color: rgba(17, 146, 206, 0.856);
+    font-size: 27px;
+    padding: 10px;
+}
+
+form img {
+    width: 30px;
+    margin-right: 8px;
+}
